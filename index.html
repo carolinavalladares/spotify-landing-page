@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- JS -->
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <i class="fab fa-spotify logo-img"></i>
+        <span class="logo-text">Spotify</span>
+      </div>
+      <div id="header-links">
+        <nav id="nav">
+          <ul id="nav-list">
+            <li><a href="#">Premium</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Download</a></li>
+          </ul>
+        </nav>
+        <div id="user">
+          <img src="./images/user-image.jpg" alt="user image" id="user-image" />
+          <button id="profile-btn">
+            Profile <span id="arrow">&Hat;</span>
+          </button>
+          <div id="profile-dropdown">
+            <a href="#" class="dropdown-link" id="account">Account</a>
+            <a href="#" class="dropdown-link" id="log-out">Log out</a>
+          </div>
+        </div>
+        <div class="logo" id="responsive-nav-logo">
+          <i class="fab fa-spotify logo-img"></i>
+          <span class="logo-text">Spotify</span>
+        </div>
+      </div>
+      <div id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </header>
+    <section id="banner">
+      <h1 id="banner-text">Go Premium. Be happy.</h1>
+      <button id="banner-btn" class="btn">Start free trial</button>
+      <p id="terms-and-conditions">
+        *<a href="#">Terms and conditions</a> apply. Open only to users who
+        haven't already tried Premium
+      </p>
+    </section>
+    <section id="album-covers">
+      <div id="album-covers-text">
+        <h2 id="album-covers-title">Looking for music?</h2>
+        <p id="album-covers-paragraph">
+          Start listening to the best new releases.
+        </p>
+        <button id="launch-web-player-btn" class="btn">
+          Launch Web Player
+        </button>
+      </div>
+      <div id="albums">
+        <!-- album 1 -->
+        <div class="album-item">
+          <img src="./images/go-away.jpg" alt="go away" class="album-img" />
+          <div class="overlay">
+            <h3 class="album-title">Go Away</h3>
+            <p class="album-artist">Omar Apollo</p>
+            <a href="#" class="overlay-btn">Play Now</a>
+          </div>
+        </div>
+        <!-- album 2 -->
+        <div class="album-item">
+          <img src="./images/stay.jpg" alt="stay" class="album-img" />
+          <div class="overlay">
+            <h3 class="album-title">Stay(with Justin Bieber)</h3>
+            <p class="album-artist">The Kid LAROI</p>
+            <a href="#" class="overlay-btn">Play Now</a>
+          </div>
+        </div>
+        <!-- album 3 -->
+        <div class="album-item">
+          <img src="./images/nda.jpg" alt="npm" class="album-img" />
+          <div class="overlay">
+            <h3 class="album-title">NPM</h3>
+            <p class="album-artist">Billie Eilish</p>
+            <a href="#" class="overlay-btn">Play Now</a>
+          </div>
+        </div>
+        <!-- album 4 -->
+        <div class="album-item">
+          <img
+            src="./images/motley-crue.jpg"
+            alt="motley-crue"
+            class="album-img"
+          />
+          <div class="overlay">
+            <h3 class="album-title">Motley Crue</h3>
+            <p class="album-artist">Post Malone</p>
+            <a href="#" class="overlay-btn">Play Now</a>
+          </div>
+        </div>
+        <!-- album 5 -->
+        <div class="album-item">
+          <img
+            src="./images/butter.jpg"
+            alt="butter / permission to dance"
+            class="album-img"
+          />
+          <div class="overlay">
+            <h3 class="album-title">Butter / Permission to Dance</h3>
+            <p class="album-artist">BTS</p>
+            <a href="#" class="overlay-btn">Play Now</a>
+          </div>
+        </div>
+        <!-- album 6 -->
+        <div class="album-item">
+          <img
+            src="./images/dont-play-with-me.jpg"
+            alt="don't play with me"
+            class="album-img"
+          />
+          <div class="overlay">
+            <h3 class="album-title">Don't Play With Me</h3>
+            <p class="album-artist">Dwn2earth</p>
+            <a href="#" class="overlay-btn">Play Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="logo">
+        <i class="fab fa-spotify logo-img"></i>
+        <span class="logo-text">Spotify</span>
+      </div>
+      <div id="social-media">
+        <a href="#" class="footer-social-media-link"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="footer-social-media-link"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="#" class="footer-social-media-link"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>

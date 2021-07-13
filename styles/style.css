@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --color-light: #fff;
+  --color-dark: #000;
+  --color-banner: #f2bd5a;
+  --color-header: rgba(0, 0, 0, 0.5);
+  --color-green: #1db954;
+  --color-green-hover: #1ed760;
+  --color-grey: #616467;
+  --color-overlay: rgba(0, 0, 0, 0.8);
+  --color-bg-icon: #222326;
+  --color-light-grey: #919496;
+}
+#hamburger {
+  display: none;
+}
+#responsive-nav-logo {
+  display: none;
+}
+#header {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: var(--color-header);
+  justify-content: space-between;
+  padding: 15px 100px;
+  z-index: 2;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.logo-img {
+  font-size: 40px;
+  margin-right: 5px;
+}
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#header-links {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav {
+  flex: 1;
+  border-right: 1px solid var(--color-light);
+}
+
+#nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+#nav-list a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#user {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+  padding: 0 10px;
+}
+#user-image {
+  width: 50px;
+  border-radius: 50%;
+}
+
+#profile-btn {
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--color-light);
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+#arrow {
+  position: absolute;
+  font-family: "Otomanopee One", sans-serif;
+  font-size: 1.5rem;
+  width: 15px;
+  font-weight: 300;
+  right: -20px;
+  transform: rotate(180deg) translateY(50%);
+  transform-origin: center;
+}
+#profile-dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light);
+  padding: 20px 90px 20px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--color-header);
+  top: 90%;
+  right: 75px;
+  display: none;
+}
+#profile-dropdown::after {
+  content: "";
+  background-color: var(--color-light);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  transform: rotate(45deg);
+}
+
+.dropdown-link {
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+#account {
+  color: var(--color-dark);
+  margin-bottom: 15px;
+}
+
+#log-out {
+  color: var(--color-light-grey);
+}
+#banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-banner);
+}
+
+#banner-text {
+  font-size: 5rem;
+  color: var(--color-light);
+  font-weight: 900;
+}
+
+.btn {
+  padding: 1em 3.5em;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#banner-btn {
+  color: var(--color-light);
+  background-color: var(--color-green);
+  margin-top: 30px;
+  border: none;
+}
+#terms-and-conditions {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: var(--color-light);
+}
+#terms-and-conditions a {
+  color: var(--color-light);
+}
+#album-covers-text {
+  text-align: center;
+  padding: 100px;
+}
+#album-covers-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+#album-covers-paragraph {
+  margin: 30px 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+#launch-web-player-btn {
+  border: 2px solid var(--color-grey);
+  color: var(--color-grey);
+  background-color: var(--color-light);
+}
+
+#albums {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.album-item {
+  position: relative;
+}
+
+.album-img {
+  width: 374px;
+}
+.overlay {
+  position: absolute;
+  background-color: var(--color-overlay);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.album-title {
+  font-size: 2rem;
+  font-weight: 900;
+  max-width: 80%;
+  text-align: center;
+}
+
+.album-artist {
+  color: var(--color-grey);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 30px 0;
+}
+.overlay-btn {
+  color: var(--color-green);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+#footer {
+  background-color: var(--color-dark);
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+#social-media {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social-media-link {
+  font-size: 25px;
+  color: var(--color-light);
+  background-color: var(--color-grey);
+  position: relative;
+  z-index: 1;
+}
+.footer-social-media-link::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-bg-icon);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hover State */
+.overlay:hover {
+  opacity: 1;
+}
+
+#launch-web-player-btn:hover {
+  background-color: var(--color-grey);
+  color: var(--color-light);
+}
+
+#banner-btn:hover {
+  background-color: var(--color-green-hover);
+}
+#nav-list a:hover,
+#profile-btn:hover,
+#account:hover,
+#log-out:hover {
+  color: var(--color-green-hover);
+}
+
+.footer-social-media-link:hover {
+  color: var(--color-green-hover);
+}
+.overlay-btn:hover {
+  color: var(--color-green-hover);
+}
+.dropdown-link:hover {
+  color: var(--color-green-hover);
+}
+
+@media only screen and (max-width: 992px) {
+  #header {
+    background-color: var(--color-dark);
+  }
+
+  #header-links {
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    top: 0;
+    right: -400px;
+    background-color: var(--color-dark);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 30px;
+    transition: right 0.3s ease-out;
+  }
+  #nav {
+    border: none;
+    flex: 0;
+  }
+  #nav-list {
+    flex-direction: column;
+    border-bottom: 1px solid var(--color-light);
+    font-size: 2.5rem;
+    height: 250px;
+  }
+
+  #user-image {
+    position: fixed;
+    width: 40px;
+    top: 15px;
+    right: 150px;
+    display: none;
+  }
+  #profile-btn {
+    display: none;
+  }
+  #profile-dropdown {
+    position: static;
+    display: flex;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  #profile-dropdown::after {
+    content: none;
+  }
+  .dropdown-link {
+    font-size: 1.5rem;
+    padding-left: 30px;
+    font-weight: 400;
+  }
+  #account,
+  #log-out {
+    color: var(--color-light);
+  }
+
+  #responsive-nav-logo {
+    display: block;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  #hamburger {
+    position: absolute;
+    right: 100px;
+    top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .line {
+    background-color: var(--color-light);
+    height: 2px;
+    width: 100%;
+    transform-origin: left;
+    transition: all 0.3s ease-out;
+  }
+
+  #banner-text {
+    font-size: 4rem;
+  }
+
+  .album-img {
+    width: 250px;
+  }
+  .album-item {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #banner-text {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #footer {
+    padding: 70px 30px;
+  }
+}
